@@ -15,8 +15,12 @@ var app = express();
 var mysql      = require('mysql');
 var fileUpload = require('express-fileupload');
 var bodyParser=require("body-parser");
-var conn = require('.env');
-var connection = conn;
+var connection = mysql.createConnection({
+              host     : 'sql7.freemysqlhosting.net',
+              user     : 'sql7271513',
+              password : 'FaVvbLM4AI',
+              database : 'sql7271513'
+            });
 connection.connect();
 global.db = connection;
 // all environments
