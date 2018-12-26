@@ -1,0 +1,50 @@
+<%- include header %>
+    <meta charset="UTF-8">
+    <title>App default page:</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+</head>
+<body id="clrblks">
+        <div class="container">
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title"><center>Selectare:</center></div>
+                    <% if (message.length>0) { %>
+                    <p class="text-center text-danger"><%= message %></p>
+                    <% } %>
+                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                    <p>Error:</p>
+                    <span></span>
+                                </div>
+                        <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
+                    </div>
+                    <div style="padding-top:30px" class="panel-body" >
+                    <div class="form-group">
+                        <label for="select" class="col-md-5 control-label">Selecteaza titlul din lista:</label>
+                        <div class="col-md-5">
+                        <!-- <input type="text" class="form-control" name="rol" placeholder="rol"> -->
+                            <select id="selectopt">
+                            <option value="De aici se selecteaza titlul dorit!" selected="selected" id="selected">De aici se selecteaza titlul dorit!</option>
+                            <% manuale.forEach((manuale) => { %>
+                                <option value=<%= manuale.Titlu_auxiliar %>><%= manuale.Titlu_auxiliar %></option>
+                            <% }) %>
+                            </select>
+                        <!-- <label for="select" class="col-md-5 control-label">aici.</label> -->
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div style="padding-top:30px" class="panel-body" >
+                    <div class="form-group">
+                        <label for="select" class="col-md-5 control-label">Selectia realizata:</label>
+                        <div class="col-md-5">
+                        <% if(1) { %>
+                                <p> <%= manuale.Titlu_auxiliar %> </p>
+                        <% } %>
+                        
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+<%- include footer %>
