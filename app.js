@@ -15,6 +15,8 @@ var app = express();
 var mysql      = require('mysql');
 var fileUpload = require('express-fileupload');
 var bodyParser=require("body-parser");
+var conn = require('.env');
+var connection = conn;
 connection.connect();
 global.db = connection;
 // all environments
