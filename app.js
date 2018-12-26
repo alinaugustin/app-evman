@@ -16,10 +16,10 @@ var mysql      = require('mysql');
 var fileUpload = require('express-fileupload');
 var bodyParser=require("body-parser");
 var connection = mysql.createConnection({
-              host     : 'sql7.freemysqlhosting.net',
-              user     : 'sql7271513',
-              password : 'FaVvbLM4AI',
-              database : 'sql7271513'
+              host     : 'localhost',
+              user     : 'app1',
+              password : 'testpass',
+              database : 'app1'
             });
 connection.connect();
 global.db = connection;
