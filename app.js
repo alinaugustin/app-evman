@@ -15,14 +15,7 @@ var app = express();
 var mysql      = require('mysql');
 var fileUpload = require('express-fileupload');
 var bodyParser=require("body-parser");
-var connection = mysql.createConnection({
-              host     : 'localhost',
-              user     : 'app1',
-              password : 'testpass',
-              database : 'app1'
-            });
-connection.connect();
-global.db = connection;
+var connection = require('./own_modules/conn');
 // all environments
 app.set('port', process.env.PORT || 8080);
 app.set('views', __dirname + '/views');
