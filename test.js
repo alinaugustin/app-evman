@@ -1,0 +1,1 @@
+import thisTest from "passport-local";
